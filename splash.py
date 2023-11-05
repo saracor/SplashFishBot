@@ -1,6 +1,7 @@
-import pyautogui, time, keyboard
+import pyautogui, time, keyboard, os
 import numpy as np
 import soundcard as sc
+
 
 def cast_line():
     time.sleep(np.random.uniform(0.3,0.6))
@@ -11,6 +12,8 @@ def cast_line():
 
 def find_bob():
     global bob_found
+    current_dir = os.getcwd()
+    bob_directory = f"{current_dir}\images"
 
     while True:
         print("<< Looking for Bob. Hold esc to quit. >>")
@@ -21,54 +24,16 @@ def find_bob():
             print("<< Exiting >>")
             exit()
 
-        screen_loc = pyautogui.locateOnScreen('images/bob1.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
-        if screen_loc:
-            screen_loc = pyautogui.center(screen_loc)
-            print("<< Moving to bob... >>")
-            pyautogui.moveTo(screen_loc.x, screen_loc.y, np.random.uniform(0.4,1.1), pyautogui.easeOutQuad)
-            bob_found = True
-            break
-
-        screen_loc = pyautogui.locateOnScreen('images/bob2.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
-        if screen_loc:
-            screen_loc = pyautogui.center(screen_loc)
-            print("<< Moving to bob... >>")
-            pyautogui.moveTo(screen_loc.x, screen_loc.y, np.random.uniform(0.4,1.1), pyautogui.easeOutQuad)
-            bob_found = True
-            break
-
-        screen_loc = pyautogui.locateOnScreen('images/nightbob1.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
-        if screen_loc:
-            screen_loc = pyautogui.center(screen_loc)
-            print("<< Moving to bob... >>")
-            pyautogui.moveTo(screen_loc.x, screen_loc.y, np.random.uniform(0.4,1.1), pyautogui.easeOutQuad)
-            bob_found = True
-            break
-
-        screen_loc = pyautogui.locateOnScreen('images/nightbob2.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
-        if screen_loc:
-            screen_loc = pyautogui.center(screen_loc)
-            print("<< Moving to bob... >>")
-            pyautogui.moveTo(screen_loc.x, screen_loc.y, np.random.uniform(0.4,1.1), pyautogui.easeOutQuad)
-            bob_found = True
-            break
-
-        screen_loc = pyautogui.locateOnScreen('images/extrabob1.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
-        if screen_loc:
-            screen_loc = pyautogui.center(screen_loc)
-            print("<< Moving to bob... >>")
-            pyautogui.moveTo(screen_loc.x, screen_loc.y, np.random.uniform(0.4,1.1), pyautogui.easeOutQuad)
-            bob_found = True
-            break
-        
-        screen_loc = pyautogui.locateOnScreen('images/extrabob2.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
-        if screen_loc:
-            screen_loc = pyautogui.center(screen_loc)
-            print("<< Moving to bob... >>")
-            pyautogui.moveTo(screen_loc.x, screen_loc.y, np.random.uniform(0.4,1.1), pyautogui.easeOutQuad)
-            bob_found = True
-            break
-
+        for file in os.listdir(bob_directory):
+            if file.endswith(".jpg"):
+                file = (f"{bob_directory}\{file}")
+                screen_loc = pyautogui.locateOnScreen(file, confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
+                if screen_loc:
+                    screen_loc = pyautogui.center(screen_loc)
+                    print("<< Moving to bob... >>")
+                    pyautogui.moveTo(screen_loc.x, screen_loc.y, np.random.uniform(0.4,1.1), pyautogui.easeOutQuad)
+                    bob_found = True
+                    break
         break
 
 
@@ -103,7 +68,6 @@ def reel_in():
             print("<< Failed. Trying again. >>")
             break
  
-
 
 if __name__ == "__main__":
     print(
