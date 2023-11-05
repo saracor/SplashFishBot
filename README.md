@@ -8,7 +8,7 @@ Use at your own risk. Any 3rd party automation, including all types of botting, 
 
 The script works on my machine™ as of its release, but may or may not work for you and will not be updated/fixed.
 
-This bot was made as an educational task. Feel free to edit it yourself to suit your needs!
+This bot was made as an educational project. Feel free to edit it yourself to suit your needs!
 
 
 ## Installation
