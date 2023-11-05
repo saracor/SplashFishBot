@@ -10,7 +10,6 @@ def cast_line():
     
 
 def find_bob():
-
     global bob_found
 
     while True:
@@ -30,7 +29,6 @@ def find_bob():
             bob_found = True
             break
 
-
         screen_loc = pyautogui.locateOnScreen('images/bob2.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
         if screen_loc:
             screen_loc = pyautogui.center(screen_loc)
@@ -39,7 +37,6 @@ def find_bob():
             bob_found = True
             break
 
-
         screen_loc = pyautogui.locateOnScreen('images/nightbob1.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
         if screen_loc:
             screen_loc = pyautogui.center(screen_loc)
@@ -47,7 +44,6 @@ def find_bob():
             pyautogui.moveTo(screen_loc.x, screen_loc.y, np.random.uniform(0.4,1.1), pyautogui.easeOutQuad)
             bob_found = True
             break
-
 
         screen_loc = pyautogui.locateOnScreen('images/nightbob2.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
         if screen_loc:
@@ -77,12 +73,10 @@ def find_bob():
 
 
 def reel_in():
-    
     seconds_timer = 0
     global reeled
 
     while True:
-
         reeled = False
 
         if keyboard.is_pressed('esc') == True:
