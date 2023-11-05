@@ -27,7 +27,7 @@ def find_bob():
         for file in os.listdir(bob_directory):
             if file.endswith(".jpg"):
                 file = (f"{bob_directory}\{file}")
-                screen_loc = pyautogui.locateOnScreen(file, confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
+                screen_loc = pyautogui.locateOnScreen(file, confidence=0.6, grayscale=True, region=(750,350, 1100, 500))
                 if screen_loc:
                     screen_loc = pyautogui.center(screen_loc)
                     print("<< Moving to bob... >>")
