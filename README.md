@@ -24,11 +24,11 @@ pip install soundcard
 ## In-game configuration
 
 ```
-Untick "Enable Sound" in the Audio options
-Download 'Better Fishing' addon
-Enable 'Enhance sounds' option from the addon to 100%
-Bind your 'Fishing' spell to a keyboard button
-Have the game running on your main screen as that is where the coordinates have been set to
+-Untick "Enable Sound" in the Audio options
+-Download 'Better Fishing' addon
+-Enable 'Enhance sounds' option from the addon to 100%
+-Bind your 'Fishing' spell to a keyboard button
+-Have the game running on your main screen as that is where the coordinates have been set to
 ```
 
 ## Usage

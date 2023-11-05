@@ -22,7 +22,7 @@ def find_bob():
             print("<< Exiting >>")
             exit()
 
-        screen_loc = pyautogui.locateOnScreen('bob1.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
+        screen_loc = pyautogui.locateOnScreen('images/bob1.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
         if screen_loc:
             screen_loc = pyautogui.center(screen_loc)
             print("<< Moving to bob... >>")
@@ -31,7 +31,7 @@ def find_bob():
             break
 
 
-        screen_loc = pyautogui.locateOnScreen('bob2.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
+        screen_loc = pyautogui.locateOnScreen('images/bob2.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
         if screen_loc:
             screen_loc = pyautogui.center(screen_loc)
             print("<< Moving to bob... >>")
@@ -40,7 +40,7 @@ def find_bob():
             break
 
 
-        screen_loc = pyautogui.locateOnScreen('nightbob1.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
+        screen_loc = pyautogui.locateOnScreen('images/nightbob1.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
         if screen_loc:
             screen_loc = pyautogui.center(screen_loc)
             print("<< Moving to bob... >>")
@@ -49,7 +49,7 @@ def find_bob():
             break
 
 
-        screen_loc = pyautogui.locateOnScreen('nightbob2.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
+        screen_loc = pyautogui.locateOnScreen('images/nightbob2.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
         if screen_loc:
             screen_loc = pyautogui.center(screen_loc)
             print("<< Moving to bob... >>")
@@ -57,7 +57,7 @@ def find_bob():
             bob_found = True
             break
 
-        screen_loc = pyautogui.locateOnScreen('extrabob1.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
+        screen_loc = pyautogui.locateOnScreen('images/extrabob1.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
         if screen_loc:
             screen_loc = pyautogui.center(screen_loc)
             print("<< Moving to bob... >>")
@@ -65,7 +65,7 @@ def find_bob():
             bob_found = True
             break
         
-        screen_loc = pyautogui.locateOnScreen('extrabob2.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
+        screen_loc = pyautogui.locateOnScreen('images/extrabob2.jpg', confidence=0.6, grayscale=True, region=(650,350, 1300, 800))
         if screen_loc:
             screen_loc = pyautogui.center(screen_loc)
             print("<< Moving to bob... >>")
@@ -131,7 +131,7 @@ Splash splash v1.0.
     if castingkey == 'exit':
         exit()
     else:
-        print("\nStarting in 10 seconds. Activate the correct window")
+        print("\nStarting in 10 seconds. Activate the correct window.")
         time.sleep(7)
         print("\n3")
         time.sleep(1)
