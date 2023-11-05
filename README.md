@@ -35,3 +35,5 @@ pip install soundcard
 
 Find a location with no other fishers as other bobbers will confuse the bot. Start the script and enjoy.
 
+In case you are having issues with the bobber detection, you can add your own bobber screenshot(s) into the images folder as jpg files and the script will use them as well.
+
