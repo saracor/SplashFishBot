@@ -15,6 +15,7 @@ Run the following commands to install dependencies:
 
 ```
 pip install pyautogui
+pip install opencv-python
 pip install keyboard
 pip install soundcard
 ```
@@ -33,5 +34,16 @@ pip install soundcard
 
 Find a location with no other fishers as other bobbers will confuse the bot. Start the script and enjoy.
 
-In case you are having issues with the bobber detection, you can add your own bobber screenshot(s) into the images folder as jpg files and the script will use them as well.
+If you are having issues with bobber detection, replace the existing bobber images with your own bobber screenshots (must be .jpg). See the original files for reference.
 
+
+## Troubleshooting
+
+Error message complaining about Pillow?
+```
+pip install --upgrade Pillow
+```
+If this doesn't fix the issue, see Pillow documentation for supported Python versions.
+
+Poor bobber detection?
+Use your own bobber images for detection. See Usage section.
