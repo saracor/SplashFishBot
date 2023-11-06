@@ -43,7 +43,7 @@ Error message complaining about Pillow?
 ```
 pip install --upgrade Pillow
 ```
-If this doesn't fix the issue, see Pillow documentation for supported Python versions.
+*If this doesn't fix the issue, see Pillow documentation for supported Python versions.*
 
 Poor bobber detection?
 ```
