@@ -39,14 +39,17 @@ python splash.py
 You have two options: 
 
 [1] Use your default audio output device. You cannot listen to other audio while botting
+
 [2] Use a virtual audio device if you want to enjoy other sounds while botting
 
 
 If using [1]
+
 *No further changes needed. Just make sure other applications don't output sound while fishing.*
 
 
 If using [2]
+
 *Download and install VoiceMeeter. Select it as the Output Device in the game audio settings. No need to configure it in any way on most devices.*
 
 
@@ -63,7 +66,9 @@ pip install --upgrade Pillow
 *If this doesn't fix the issue, see Pillow documentation for supported Python versions.*
 
 Poor bobber detection?
+
 *Use your own bobber images for detection. See Usage section.*
 
 Other application sounds disturbing sound detection?
+
 *See Usage section for using a virtual audio device.*
