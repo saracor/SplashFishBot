@@ -35,10 +35,20 @@ pip install soundcard
 Find a location with no other fishers as other bobbers will confuse the bot. Start the script and enjoy.
 
 You have two options: 
+```
 [1] Use your default audio output device. You cannot listen to other audio sources while using the bot if selecting this.
 [2] Use a virtual audio device if you want to enjoy other sounds as well like listen to music or watch a stream on another monitor while fishing. 
+```
 
-If going with [2] -> Download and install VoiceMeeter and select it as the Output Device in the game audio settings. No need to configure it in any way on most devices.
+If using [1]
+```
+No further changes needed. Just make sure other applications don't output sound while fishing.
+```
+
+If using [2]
+```
+Download and install VoiceMeeter. Select it as the Output Device in the game audio settings. No need to configure it in any way on most devices.
+```
 
 If you are having issues with bobber detection due to resolution or other differences, replace the existing images with a few of your own bobber screenshots (must be .jpg). See the original files for reference.
 
