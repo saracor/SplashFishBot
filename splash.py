@@ -18,7 +18,7 @@ def find_bob():
     while True:
         print("<< Looking for Bob. Hold esc to quit. >>")
         bob_found = False
-        time.sleep(np.random.uniform(0.6,1.2))
+        time.sleep(np.random.uniform(1.0,1.5))
 
         if keyboard.is_pressed('esc') == True:
             print("<< Exiting >>")
@@ -27,7 +27,7 @@ def find_bob():
         for file in os.listdir(bob_directory):
             if file.endswith(".jpg"):
                 file = (f"{bob_directory}\{file}")
-                screen_loc = pyautogui.locateOnScreen(file, confidence=0.6, grayscale=True, region=(750,350, 1100, 500))
+                screen_loc = pyautogui.locateOnScreen(file, confidence=0.6, grayscale=True)
                 if screen_loc:
                     screen_loc = pyautogui.center(screen_loc)
                     print("<< Moving to bob... >>")
@@ -111,10 +111,8 @@ Splash v1.0.
             if reeled:
                 continue
         else:
-            time.sleep(np.random.uniform(2.3,4.7))
+            time.sleep(np.random.uniform(2.3,3.7))
             continue
-
-        
 
 
 
