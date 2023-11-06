@@ -27,7 +27,6 @@ pip install soundcard
 • Download 'Better Fishing' addon
 • Enable 'Enhance sounds' option from the addon to 100%
 • Bind your 'Fishing' spell to a keyboard button
-• Have the game running on your main screen as that is where the coordinates have been set to. Otherwise you need to edit the region argument or simply remove it
 • Disable guild member alert via Interface -> Social -> Guild Member Alert
 
 ```
