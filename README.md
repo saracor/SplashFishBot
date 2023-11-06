@@ -22,33 +22,33 @@ pip install soundcard
 
 ## In-game configuration
 
-```
 • Enable Auto Loot if not enabled. Gameplay -> Controls -> Auto Loot
 • Untick all sound options from the game Audio options, including "Enable Sounds"
 • Download 'Better Fishing' addon
 • Enable 'Enhance sounds' option from the addon to 100%
 • Bind your 'Fishing' spell to a keyboard button
-```
+
 
 ## Usage
 
 Find a location with no other fishers as other bobbers will confuse the bot. Start the script and enjoy.
+```
+python splash.py
+```
 
 You have two options: 
-```
-[1] Use your default audio output device. You cannot listen to other audio sources while using the bot if selecting this.
-[2] Use a virtual audio device if you want to enjoy other sounds as well like listen to music or watch a stream on another monitor while fishing. 
-```
+
+[1] Use your default audio output device. You cannot listen to other audio while botting
+[2] Use a virtual audio device if you want to enjoy other sounds while botting
+
 
 If using [1]
-```
-No further changes needed. Just make sure other applications don't output sound while fishing.
-```
+*No further changes needed. Just make sure other applications don't output sound while fishing.*
+
 
 If using [2]
-```
-Download and install VoiceMeeter. Select it as the Output Device in the game audio settings. No need to configure it in any way on most devices.
-```
+*Download and install VoiceMeeter. Select it as the Output Device in the game audio settings. No need to configure it in any way on most devices.*
+
 
 If you are having issues with bobber detection due to resolution or other differences, replace the existing images with a few of your own bobber screenshots (must be .jpg). See the original files for reference.
 
@@ -56,17 +56,14 @@ If you are having issues with bobber detection due to resolution or other differ
 ## Troubleshooting
 
 Error message complaining about Pillow when running the script?
+
 ```
 pip install --upgrade Pillow
 ```
 *If this doesn't fix the issue, see Pillow documentation for supported Python versions.*
 
 Poor bobber detection?
-```
-Use your own bobber images for detection. See Usage section.
-```
+*Use your own bobber images for detection. See Usage section.*
 
 Other application sounds disturbing sound detection?
-```
-See Usage section for using a virtual audio device.
-```
+*See Usage section for using a virtual audio device.*
