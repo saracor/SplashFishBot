@@ -48,4 +48,11 @@ pip install --upgrade Pillow
 If this doesn't fix the issue, see Pillow documentation for supported Python versions.
 
 Poor bobber detection?
+```
 Use your own bobber images for detection. See Usage section.
+```
+
+Other sounds disturbing sound recognition?
+```
+Mute other apps via your operating system's sound settings.
+```
