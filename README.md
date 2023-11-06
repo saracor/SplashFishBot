@@ -28,7 +28,6 @@ pip install soundcard
 • Enable 'Enhance sounds' option from the addon to 100%
 • Bind your 'Fishing' spell to a keyboard button
 • Disable guild member alert via Interface -> Social -> Guild Member Alert
-
 ```
 
 ## Usage
