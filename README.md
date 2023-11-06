@@ -23,23 +23,29 @@ pip install soundcard
 ## In-game configuration
 
 ```
-• Untick "Enable Sound" in the game Audio options
+• Enable Auto Loot if not enabled. Gameplay -> Controls -> Auto Loot
+• Untick all sound options from the game Audio options, including "Enable Sounds"
 • Download 'Better Fishing' addon
 • Enable 'Enhance sounds' option from the addon to 100%
 • Bind your 'Fishing' spell to a keyboard button
-• Disable guild member alert via Interface -> Social -> Guild Member Alert
 ```
 
 ## Usage
 
 Find a location with no other fishers as other bobbers will confuse the bot. Start the script and enjoy.
 
-If you are having issues with bobber detection, replace the existing bobber images with your own bobber screenshots (must be .jpg). See the original files for reference.
+You have two options: 
+[1] Use your default audio output device. You cannot listen to other audio sources while using the bot if selecting this.
+[2] Use a virtual audio device if you want to enjoy other sounds as well like listen to music or watch a stream on another monitor while fishing. 
+
+If going with [2] -> Download and install VoiceMeeter and select it as the Output Device in the game audio settings. No need to configure it in any way on most devices.
+
+If you are having issues with bobber detection due to resolution or other differences, replace the existing images with a few of your own bobber screenshots (must be .jpg). See the original files for reference.
 
 
 ## Troubleshooting
 
-Error message complaining about Pillow?
+Error message complaining about Pillow when running the script?
 ```
 pip install --upgrade Pillow
 ```
@@ -50,7 +56,7 @@ Poor bobber detection?
 Use your own bobber images for detection. See Usage section.
 ```
 
-Other sounds disturbing sound recognition?
+Other application sounds disturbing sound detection?
 ```
-Mute other apps via your operating system's sound settings.
+See Usage section for using a virtual audio device.
 ```

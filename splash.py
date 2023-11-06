@@ -18,7 +18,7 @@ def find_bob():
     while True:
         print("<< Looking for Bob. Hold esc to quit. >>")
         bob_found = False
-        time.sleep(np.random.uniform(1.0,1.5))
+        time.sleep(np.random.uniform(1.3,1.7))
 
         if keyboard.is_pressed('esc') == True:
             print("<< Exiting >>")
@@ -27,7 +27,7 @@ def find_bob():
         for file in os.listdir(bob_directory):
             if file.endswith(".jpg"):
                 file = (f"{bob_directory}\{file}")
-                screen_loc = pyautogui.locateOnScreen(file, confidence=0.6, grayscale=True)
+                screen_loc = pyautogui.locateOnScreen(file, confidence=0.7, grayscale=True)
                 if screen_loc:
                     screen_loc = pyautogui.center(screen_loc)
                     print("<< Moving to bob... >>")
@@ -47,24 +47,25 @@ def reel_in():
         if keyboard.is_pressed('esc') == True:
             print("<< Exiting >>")
             exit()
-
-        audio_source = sc.default_speaker().name
+        if input_device == '1':
+            audio_source = sc.default_speaker().name
+        if input_device == '2':
+            audio_source = sc.get_speaker('VoiceMeeter Input').name
         mic = sc.get_microphone(id=audio_source, include_loopback=True)
-        data = mic.record(samplerate=44100, numframes=44100)
+        data = mic.record(samplerate=48000, numframes=48000)
         audio_peak = np.max(abs(data))
         seconds_timer += 1
 
         if audio_peak > 0.06:
             print("<< You (hopefully) caught something! >>\n")
-            time.sleep(np.random.uniform(0.05,0.12))
             pyautogui.mouseDown(button='right')
-            time.sleep(np.random.uniform(0.05,0.12))
+            time.sleep(np.random.uniform(0.03,0.08))
             pyautogui.mouseUp(button='right')
             time.sleep(np.random.uniform(0.35,0.5))
             reeled = True
             break
 
-        if seconds_timer > 13:
+        if seconds_timer > 12:
             print("<< Failed. Trying again. >>")
             break
  
@@ -82,9 +83,12 @@ Splash v1.0.
     '''
     )
 
+    global input_device
     global castingkey
-    print()
-    castingkey = input("Input your casting key or type exit to quit the program > ")
+    input_device = input("\nSelect your in-game Audio Output device\n[1] Default Speakers [2] VoiceMeeter [3] Exit the app >> ")
+    if input_device == '3':
+        exit()
+    castingkey = input("\nInput your casting key or type exit to quit the program >> ")
     castingkey = castingkey.lower()
     if castingkey == 'exit':
         exit()
@@ -112,6 +116,7 @@ Splash v1.0.
                 continue
         else:
             time.sleep(np.random.uniform(2.3,3.7))
+            print("<< Could not find Bob. Trying again. >>")
             continue
 
 
