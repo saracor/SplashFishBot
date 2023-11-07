@@ -4,7 +4,7 @@ import soundcard as sc
 
 
 def cast_line():
-    time.sleep(np.random.uniform(0.3,0.6))
+    time.sleep(np.random.uniform(0.3,0.55))
     pyautogui.keyDown(f'{castingkey}')
     time.sleep(np.random.uniform(0.1,0.3))
     pyautogui.keyUp(f'{castingkey}')
@@ -29,9 +29,9 @@ def find_bob():
                 file = (f"{bob_directory}\{file}")
                 screen_loc = pyautogui.locateOnScreen(file, confidence=0.7, grayscale=True)
                 if screen_loc:
-                    screen_loc = pyautogui.center(screen_loc)
+                    screen_loc_offset = ((screen_loc[0] + int(screen_loc[2] / 2) + np.random.uniform(-3,3)), (screen_loc[1] + int(screen_loc[3] / 2)) + np.random.uniform(-3,3))
                     print("<< Moving to bob... >>")
-                    pyautogui.moveTo(screen_loc.x, screen_loc.y, np.random.uniform(0.4,1.1), pyautogui.easeOutQuad)
+                    pyautogui.moveTo(screen_loc_offset[0], screen_loc_offset[1], np.random.uniform(0.4,1.1), pyautogui.easeOutQuad)
                     bob_found = True
                     break
         break
