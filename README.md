@@ -24,13 +24,15 @@ pip install soundcard
 
 • Enable Auto Loot if not enabled. Gameplay -> Controls -> Auto Loot
 
-• Untick all sound options from the game Audio options, including "Enable Sounds"
+• Untick all sound options from the game Audio options, including 'Enable Sounds'
 
 • Download 'Better Fishing' addon
 
 • Enable 'Enhance sounds' option from the addon to 100%
 
 • Bind your 'Fishing' spell to a keyboard button
+
+• If you want to be able to fish up BoP items (like rare fish for achievements), download 'Leatrix Plus' addon and select 'Disable loot warnings' from the System menu
 
 
 ## Usage
@@ -60,11 +62,9 @@ pip install --upgrade Pillow
 If this doesn't fix the issue, see Pillow documentation for supported Python versions.
 
 
-
 Poor bobber detection?
 
 Use your own bobber images for detection. See Usage section.
-
 
 
 Other application sounds disturbing sound detection?
