@@ -26,9 +26,7 @@ pip install soundcard
 
 • Untick all sound options from the game Audio options, including 'Enable Sounds'
 
-• Download 'Better Fishing' addon
-
-• Enable 'Enhance sounds' option from the addon to 100%
+• Download 'Better Fishing' addon and enable 'Enhance sounds' option from the addon to 100%
 
 • Bind your 'Fishing' spell to a keyboard button
 
@@ -46,7 +44,7 @@ You have two options:
 
 [1] Use your default audio output device. You cannot listen to other audio while botting. No further changes needed.
 
-[2] Use a virtual audio device if you want to enjoy other sounds while botting. If selecting this, you need to download and install VoiceMeeter, and set it as your Output Device in the game options.
+[2] Use a virtual audio device called VoiceMeeter if you want to enjoy other sounds while botting. When selecting this, you need to download and install VoiceMeeter, and set it as your Output Device in the game options.
 
 
 If you are having issues with bobber detection due to resolution or other differences, replace the existing images with a few of your own bobber screenshots (must be .jpg). See the original files for reference.
