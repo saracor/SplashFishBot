@@ -24,16 +24,19 @@ def find_bob():
             print("<< Exiting >>")
             exit()
 
-        for file in os.listdir(bob_directory):
-            if file.endswith(".jpg"):
-                file = (f"{bob_directory}\{file}")
-                screen_loc = pyautogui.locateOnScreen(file, confidence=0.7, grayscale=True)
-                if screen_loc:
-                    screen_loc_offset = ((screen_loc[0] + int(screen_loc[2] / 2) + np.random.uniform(-3,3)), (screen_loc[1] + int(screen_loc[3] / 2)) + np.random.uniform(-3,3))
-                    print("<< Moving to bob... >>")
-                    pyautogui.moveTo(screen_loc_offset[0], screen_loc_offset[1], np.random.uniform(0.4,1.1), pyautogui.easeOutQuad)
-                    bob_found = True
-                    break
+        try:
+            for file in os.listdir(bob_directory):
+                if file.endswith(".jpg"):
+                    file = (f"{bob_directory}\{file}")
+                    screen_loc = pyautogui.locateOnScreen(file, confidence=0.7, grayscale=True)
+                    if screen_loc:
+                        screen_loc_offset = ((screen_loc[0] + int(screen_loc[2] / 2) + np.random.uniform(-3,3)), (screen_loc[1] + int(screen_loc[3] / 2)) + np.random.uniform(-3,3))
+                        print("<< Moving to bob... >>")
+                        pyautogui.moveTo(screen_loc_offset[0], screen_loc_offset[1], np.random.uniform(0.4,1.1), pyautogui.easeOutQuad)
+                        bob_found = True
+                        break
+        except pyautogui.ImageNotFoundException:
+            pass
         break
 
 
