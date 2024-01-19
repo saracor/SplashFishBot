@@ -57,14 +57,14 @@ Error message complaining about Pillow when running the script?
 ```
 pip install --upgrade Pillow
 ```
-If this doesn't fix the issue, see Pillow documentation for supported Python versions.
+*If this doesn't fix the issue, see Pillow documentation for supported Python versions.*
 
 
 Poor bobber detection?
 
-Use your own bobber images for detection. See Usage section.
+* Use your own bobber images for detection. See Usage section.
 
 
 Other application sounds disturbing sound detection?
 
-See Usage section for using a virtual audio device.
+* See Usage section for using a virtual audio device.
