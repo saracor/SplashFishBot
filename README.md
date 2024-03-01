@@ -1,4 +1,4 @@
-# Splash v1.0 - A WoW Classic Fishing Bot
+# Splash - A WoW Classic Fishing Bot
 
 *A simple Python script for fishing automation.*
 
