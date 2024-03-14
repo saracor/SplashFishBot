@@ -20,12 +20,6 @@ pip install keyboard
 pip install soundcard
 ```
 
-**If you are running Era or SoD**, you need to edit seconds_timer on row 71 in splash.py to be longer as the cast time is longer in those versions. 
-Era/SoD new value:
-```
-if seconds_timer > 26:
-```
-
 ## In-game configuration
 
 • Enable Auto Loot if not enabled. Gameplay -> Controls -> Auto Loot
