@@ -68,7 +68,7 @@ def reel_in():
             reeled = True
             break
 
-        if seconds_timer > 12:
+        if seconds_timer > wait_timer:
             print("<< Failed. Trying again. >>")
             break
  
@@ -86,8 +86,17 @@ Splash v1.0.
     '''
     )
 
-    global input_device
-    global castingkey
+    gameversion = input("\nSelect your game version\n[1] Era/SoD [2] WotLK [3] Exit the app >> ")
+    if gameversion == '1':
+        wait_timer = 27
+    elif gameversion == '2':
+        wait_timer = 12
+    elif gameversion == '3':
+        exit()
+    else:
+        print("\nWrong input. << Exiting >>")
+        exit()
+
     input_device = input("\nSelect your in-game Audio Output device\n[1] Default Speakers [2] VoiceMeeter [3] Exit the app >> ")
     if input_device == '3':
         exit()
@@ -121,8 +130,3 @@ Splash v1.0.
             time.sleep(np.random.uniform(2.3,3.7))
             print("<< Could not find Bob. Trying again. >>")
             continue
-
-
-
-
-
